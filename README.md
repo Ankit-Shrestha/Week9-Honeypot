@@ -1,18 +1,23 @@
+
 # Project 9 - Honeypot
 
 Time spent: 15 hours spent in total
 
   **Which Honeypot(s) you deployed**
   
-The Deploy tab in the MHN server gives you an option to choose different kind of honeypots. Then, according to the differnt honeypots chosen, different scripts and deploy command could be generated in the server. Then, different virtual machines could be used to deploy individual honeypots. Logging in into individual instance of the virtual machines, honeypots can be deployed using the deploy command from the server. I created eight different honeypots since that was the limit for the GPU of the google cloud server:
+The Deploy tab in the MHN server gives you an option to choose different kind of honeypots. Then, according to the different honeypots chosen, different scripts and deploy command could be generated in the server. Then, different virtual machines could be used to deploy individual honeypots. Logging in into individual instance of the virtual machines, honeypots can be deployed using the deploy command from the server. I created eight different honeypots since that was the limit for the GPU of the google cloud server:
+
+   * This listens on port 80, and only one should run on the same sensor, unless different ports are configured:
       - wordpot
-      - Dionea/ Dionea with HTTP
+  * This listens on windows ports 445, 139, etc. Chose one or modify to listen on different ports:
+      - Dionea
+  * These can be run with each other and any of the others (no port conflicts):
       - snort
       - suricata
       - p0f
       - elastichoney
    
-Each of these have been created with separate scripts from MHN server.
+Each of these have been created with separate deploy command from MHN server.
   
   
   **Any issues you encountered**
